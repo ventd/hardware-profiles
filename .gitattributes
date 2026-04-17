@@ -1,0 +1,7 @@
+# Pin text files to LF so Windows contributors with core.autocrlf=true
+# don't commit CRLF that breaks downstream YAML parsers.
+
+*.yaml text eol=lf
+*.yml  text eol=lf
+*.md   text eol=lf
+*      text=auto
