@@ -1,0 +1,10 @@
+# ventd hardware profiles
+#
+# Schema version: 0 (unstable — will change when internal/hwdb lands).
+# One document per machine, keyed by fingerprint. No entries yet.
+#
+# See https://github.com/ventd/ventd/blob/main/internal/hwdb/profiles.yaml
+# for the in-tree seed corpus that mirrors this file's shape.
+
+version: 0
+profiles: []
