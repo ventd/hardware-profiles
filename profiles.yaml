@@ -1,10 +1,20 @@
 # ventd hardware profiles
 #
-# Schema version: 0 (unstable — will change when internal/hwdb lands).
-# One document per machine, keyed by fingerprint. No entries yet.
+# Community-sourced hardware profile database for ventd.
+# Schema: flat list of profile entries keyed by DMI/SMBIOS match fields.
+# Canonical shape is mirrored from internal/hwdb/profiles.yaml in the main
+# ventd repo.
 #
 # See https://github.com/ventd/ventd/blob/main/internal/hwdb/profiles.yaml
-# for the in-tree seed corpus that mirrors this file's shape.
+# for the in-tree seed corpus and the up-to-date documentation on each
+# field's semantics.
+#
+# Match semantics (see ventd/internal/hwdb/hwdb.go): exact > prefix >
+# wildcard (substring). Empty fields are wildcards. Entries with every
+# match field empty never match.
+#
+# Population pipeline: Phase 5 of the ventd roadmap (P5-PROF-01 profile
+# capture + P5-PROF-02 publication). Until that ships, this file is empty
+# and --refresh-hwdb will successfully refresh zero profiles.
 
-version: 0
-profiles: []
+[]
